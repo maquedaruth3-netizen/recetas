@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Blog Culinario</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script defer src="script.js"></script>
+</head>
+<body id="inicio">
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo" aria-label="Ir al inicio">
+        <img src="logo.jpg" alt="logo de mi blog">
+        <span>MI BLOG CULINARIO</span>
+      </a>
+
+      <ul class="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#recetas">Recetas</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><button class="theme-toggle boton-receta">🌙 Modo</button></li>
+      </ul>
+
+      <button id="hamburger" class="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <aside id="sidebar" class="sidebar" aria-hidden="true">
+    <button id="close-btn" class="close-btn" aria-label="Cerrar menú">✖</button>
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#recetas">Recetas</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="espagueti.html">Espagueti a la boloñesa</a></li>
+      <li><a href="sopa.html">Sopa blanca</a></li>
+      <li><a href="gelatina.html">Gelatina tricolor</a></li>
+      <li><button class="theme-toggle boton-receta">🌙 Modo</button></li>
+    </ul>
+  </aside>
+
+  <main>
+    <section id="inicio" class="receta-card" aria-label="Presentación">
+      <h1>¡Hola! Bienvenido a mi Blog Culinario</h1>
+      <p>Aquí encontrarás recetas caseras, fáciles de preparar y que podrás disfrutar con tu familia.</p>
+      <p><a href="#recetas" class="boton-receta">Ver las recetas destacadas</a></p>
+    </section>
+
+    <section id="recetas" aria-label="Recetas destacadas">
+      <h2>Recetas Destacadas</h2>
+
+      <article class="receta-card" aria-labelledby="r-espagueti">
+        <h3 id="r-espagueti">🍝 Espagueti a la Boloñesa</h3>
+        <figure>
+          <img src="espaguetis-a-la-bolonesa.jpg" alt="Espagueti a la boloñesa">
+          <figcaption>Espagueti a la boloñesa ideal para comidas y reuniones informales.</figcaption>
+        </figure>
+        <p>Puedes acompañarlo con queso parmesano rallado y un vaso de tu bebida favorita.</p>
+        <p>⏱ 40 min salsa boloñesa | 8-12 min pasta | ⭐ Fácil</p>
+        <a href="espagueti.html" class="boton-receta">Ver la receta completa</a>
+      </article>
+
+      <article class="receta-card" aria-labelledby="r-sopa">
+        <h3 id="r-sopa">🍲 Sopa Blanca con Pechugas Empanizadas</h3>
+        <figure>
+          <img src="pechugas-empanizadas.jpg" alt="Sopa blanca con pechugas empanizadas">
+          <figcaption>Sopa blanca con pechugas empanizadas, reconfortante y llena de sabor.</figcaption>
+        </figure>
+        <p>Se puede acompañar con verduras al vapor o ensalada fresca.</p>
+        <p>⏱ 20-30 min sopa | 15-20 min pechugas | ⭐ Fácil</p>
+        <a href="sopa.html" class="boton-receta">Ver la receta completa</a>
+      </article>
+
+      <article class="receta-card" aria-labelledby="r-gelatina">
+        <h3 id="r-gelatina">🥮 Gelatina con Crema</h3>
+        <figure>
+          <img src="gelatina.jpg" alt="Gelatina con crema">
+          <figcaption>Gelatina con crema, dulce, fresca y perfecta para la mesa.</figcaption>
+        </figure>
+        <p>Se puede acompañar con frutas frescas como fresa, kiwi o durazno.</p>
+        <p>⏱ 10-15 min preparación | 2-3 h refrigeración | ⭐ Fácil</p>
+        <a href="gelatina.html" class="boton-receta">Ver receta completa</a>
+      </article>
+    </section>
+
+    <section id="sobre-mi" class="receta-card" aria-label="Sobre mí">
+      <h2>Sobre mí</h2>
+      <img src="perfil.jpg" alt="Foto de Denisse">
+      <p>Hola, soy Denisse y tengo 17 años. No soy una gran apasionada de la cocina, pero me gusta aprender cosas nuevas y descubrir cómo los sabores pueden despertar recuerdos o emociones.</p>
+      <p>Me gustaría seguir aprendiendo poco a poco, experimentando con ingredientes y técnicas, y algún día poder preparar platillos con confianza y creatividad.</p>
+      <p>Mi idea es disfrutar cada logro en la cocina y dejar que esta experiencia me enseñe tanto sobre los sabores como sobre mí misma.</p>
+      <h4>Sígueme en redes sociales</h4>
+      <p>Instagram: <a href="https://www.instagram.com/moon__dess">📸</a></p>
+      <p>Facebook: <a href="https://www.facebook.com/share/19tCaM2W33">📘</a></p>
+    </section>
+
+    <section id="newsletter" class="receta-card">
+      <h2>Suscríbete para más</h2>
+      <p>Recibe nuevas recetas o actualizaciones</p>
+      <form action="#" method="post">
+        <label for="email">Correo Electrónico</label>
+        <input type="email" name="email" id="email" placeholder="ejemplo@tunombre.com" required>
+        <button type="submit" class="boton-receta">Suscribirse</button>
+      </form>
+      <p id="mensaje"></p>
+    </section>
+  </main>
+
+  <footer id="contacto">
+    <p>Contacto: <a href="mailto:maquedaruth3@gmail.com">maquedaruth3@gmail.com</a></p>
+    <p>&copy; MI BLOG CULINARIO DENISSE CIENEGA</p>
+  </footer>
+
+</body>
+</html>
